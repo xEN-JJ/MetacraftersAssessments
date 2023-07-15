@@ -1,0 +1,37 @@
+const nerDogNFTs = [];
+
+function mintNFT (dogName, furColor, size, expression, bling) {
+    const NFT = {
+        "name": dogName,
+        "furColor": furColor,
+        "size": size,
+        "expression": expression,
+        "bling": bling
+    }
+    nerDogNFTs.push(NFT);
+    console.log("Minted: " + " " + NFT.name);
+    console.log("--------------------")
+}
+function listNFTs() {
+    for(let i=0; i<nerDogNFTs.length;i++){
+        console.log("\nNFT ID: \t"+ (i + 1));
+        console.log("|---------------------|")
+        console.log("Name: \t\t" + nerDogNFTs[i].name);
+        console.log("FurColor: \t" + nerDogNFTs[i].furColor);
+        console.log("Size: \t\t" + nerDogNFTs[i].size);
+        console.log("Expression: " + nerDogNFTs[i].expression);
+        console.log("Bling: \t\t" + nerDogNFTs[i].bling);
+    }
+}
+function getTotalSupply() {
+
+console.log("\nTotal NFTs: " + nerDogNFTs.length);
+       
+}
+
+mintNFT("Jake", "Black", "Medium", "Happy", "Oval Glasses");
+mintNFT("Bobby", "Brown", "Small", "Excited", "Square Glasses");
+mintNFT("Tom", "White", "Big", "Gloomy", "Round Glasses")
+
+listNFTs();
+getTotalSupply();
